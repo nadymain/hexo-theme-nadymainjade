@@ -1,0 +1,66 @@
+*, *:before, *:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+html
+    font-family: sans-serif
+    -webkit-text-size-adjust: 100%
+    -ms-text-size-adjust: 100%
+    overflow-y: scroll
+
+.clear,header,footer,article,nav,main
+    display: block
+
+.clear:after,header:after,footer:after,article:after,nav:after,main:after
+    content: " "
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr, td, th,
+dl, dd, ol, ul, figure
+    margin: 0
+
+a
+    text-decoration: none
+
+img 
+    border: 0
+    width: 100% \9
+    max-width: 100%
+    vertical-align: middle
+
+h1, h2, h3
+    font-weight: 400
+    line-height: 1.1
+    
+nav ul
+    list-style: none
+    padding: 0
+    margin:0
+
+nav li
+    float:left
+
+nav li li
+    float:none
+
+li ul, li ol
+    margin-bottom: 0
+
+table 
+    border-collapse: collapse
+    border-spacing: 0
+    
+td, th
+  padding: 0
+
+hr 
+    -moz-box-sizing: content-box
+    box-sizing: content-box
+    height: 0
+    border: 0
+    border-top: 1px solid #ddd

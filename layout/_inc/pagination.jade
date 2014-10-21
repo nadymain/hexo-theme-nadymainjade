@@ -1,0 +1,10 @@
+nav.archive-nav
+    
+    if page.prev
+        a(class='prev', href=url_for(page.prev_link))!= '&larr; Prev'
+        
+     span.page-number
+        = 'Page ' + page.current +  ' of ' + page.total
+
+    if page.next
+        a(class='next', href=url_for(page.next_link))!= 'Next &rarr;'

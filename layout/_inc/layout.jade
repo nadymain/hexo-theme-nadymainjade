@@ -1,0 +1,19 @@
+doctype html
+
+html(lang="id")
+
+    head
+  
+        include head.jade
+    
+    body
+        
+        div.container
+  
+            include header.jade
+
+            main(class='site-main', role='main')
+
+                block main
+
+            include footer.jade

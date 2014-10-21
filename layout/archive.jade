@@ -1,0 +1,58 @@
+extends _inc/layout.jade
+
+block head_title
+    title 
+        if !is_year()
+            = 'Sitemap | ' + config.title
+            
+        else
+            = page.year + '/' + page.month + ' | ' + config.title
+            
+
+block main
+
+    if !is_year()
+
+        div.sitemap
+        
+            p.archive-title Sitemap
+                        
+            aside
+                h2 Categories
+                != list_categories({ show_count: false })
+                
+            aside
+                h2 Tags
+                != list_tags({ show_count: false })
+                
+            aside
+                h2 Archives
+                != list_archives({ show_count: false })
+
+    else
+        div.page-archive
+        
+            p.archive-title
+                = page.year + '/' + page.month
+        
+            ul.archive
+
+                - page.posts.each(function(article){
+
+                    li
+
+                        if article.link
+                            time(datetime=date_xml(article.date))
+                                = date(article.date)
+                            h2.list-title
+                                a(href=url_for(article.link) target="_blank")= article.title || 'No Title'
+
+                        else
+                            time(datetime=date_xml(article.date))
+                                = date(article.date)
+                            h2.list-title
+                                a(href=url_for(article.path))= article.title || 'No Title'
+
+                - })
+
+        include _inc/pagination.jade

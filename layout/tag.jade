@@ -1,0 +1,34 @@
+extends _inc/layout.jade
+
+block head_title
+    title 
+        = page.tag + ' | ' + config.title
+
+block main
+
+    div.page-archive
+
+        p.archive-title
+            = page.tag
+
+        ul.archive
+
+            - page.posts.each(function(article){
+
+                li
+
+                    if article.link
+                        time(datetime=date_xml(article.date))
+                            = date(article.date)
+                        h2.list-title
+                            a(href=url_for(article.link) target="_blank")= article.title || 'No Title'
+
+                    else
+                        time(datetime=date_xml(article.date))
+                           = date(article.date)
+                        h2.list-title
+                            a(href=url_for(article.path))= article.title || 'No Title'
+
+            - })
+
+    include _inc/pagination.jade

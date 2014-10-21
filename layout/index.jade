@@ -1,0 +1,64 @@
+extends _inc/layout
+
+block head_title
+    title 
+        if config.subtitle
+            = config.title + ' | ' + config.subtitle
+        else
+            = config.title
+            
+block head_descriptions
+    if config.description
+        meta(name='description', content=config.description)
+
+block main
+
+    div.home
+    
+        ul.archive
+        
+            - $i = 0
+            - page.posts.each(function(post){
+                - $i++
+                if $i == 1 && is_current(path, ' / ' )
+
+                    li.first-li
+
+                        if post.link
+                            time(datetime=date_xml(post.date))
+                               = date(post.date)
+                            h2.list-title
+                                a(href=url_for(post.link) target="_blank")= post.title || 'No Title'
+
+                        else
+                            time(datetime=date_xml(post.date))
+                                = date(post.date)
+                            h2.list-title
+                                a(href=url_for(post.path))= post.title || 'No Title'
+                        if post.description
+                            p.archive-desc
+                                =  post.description
+                else
+                
+                    li
+
+                        if post.link
+                            time(datetime=date_xml(post.date))
+                               = date(post.date)
+                            h2.list-title
+                                a(href=url_for(post.link) target="_blank")= post.title || 'No Title'
+
+                        else
+                            time(datetime=date_xml(post.date))
+                                = date(post.date)
+                            h2.list-title
+                                a(href=url_for(post.path))= post.title || 'No Title'
+                                
+                        if post.description
+                            p.archive-desc
+                                =  post.description
+                
+                            
+            - })
+            
+    include _inc/pagination

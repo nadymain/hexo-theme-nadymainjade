@@ -1,0 +1,37 @@
+extends _inc/layout.jade
+
+block head_title
+    title
+        = page.title + ' | ' + config.title
+        
+block head_descriptions
+    if page.description
+        meta(name='description', content=page.description)
+        
+block main
+
+    article.article
+        
+        time(datetime=date_xml(page.date))= date(page.date)
+
+
+        if page.link
+            h2.article-title
+                a(href=url_for(page.link) target="_blank")= page.title || 'No Title'
+        else
+            h2.article-title
+                a(href=url_for(page.path))= page.title || 'No Title'
+                
+        div.content
+            != page.content
+            
+        div.meta
+            if page.categories && page.categories.length
+                p.meta-cats
+                    != list_categories(page.categories, { show_count: false, style: 'none', separator: ', ' })
+            
+            if page.tags && page.tags.length
+                p.meta-tags
+                    != list_tags(page.tags, { show_count: false, style: 'none', separator: ', ' })
+
+    include _inc/content-nav

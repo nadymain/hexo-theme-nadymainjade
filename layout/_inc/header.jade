@@ -1,0 +1,17 @@
+header.site-header
+
+    if theme.logo
+        img(src=theme.root + theme.logo alt="")
+    
+    h1
+        a(href=url_for())=theme.title
+    
+    if config.subtitle
+        p
+            = config.subtitle
+
+    nav
+        ul 
+            - for (var i in theme.menu)
+                li
+                    a(href=url_for(theme.menu[i]))=i
