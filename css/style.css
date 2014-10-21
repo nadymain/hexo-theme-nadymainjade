@@ -1,0 +1,431 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-y: scroll;
+}
+.clear,
+header,
+footer,
+article,
+nav,
+main {
+  display: block;
+}
+.clear:after,
+header:after,
+footer:after,
+article:after,
+nav:after,
+main:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+td,
+th,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: 0;
+  width: 100% 9;
+  max-width: 100%;
+  vertical-align: middle;
+}
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: 1.1;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  float: left;
+}
+nav li li {
+  float: none;
+}
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+.container {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 90%;
+  max-width: 600px;
+}
+body,
+button,
+input,
+select,
+textarea {
+  color: #444;
+  line-height: 1.5;
+  font-size: 12px;
+}
+a {
+  color: #0e83cd;
+}
+a:hover {
+  color: #444;
+}
+h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 12px;
+  font-weight: 700;
+}
+.site-main {
+  margin: 40px 0;
+  min-height: 250px;
+}
+time {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.site-header {
+  text-align: center;
+}
+.site-header img {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+}
+.site-header h1 {
+  margin: 30px 0 5px;
+}
+.site-header p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #888;
+}
+.site-header nav {
+  display: inline-block;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.site-header li {
+  margin-right: 10px;
+}
+.site-header li:last-child {
+  margin-right: 0;
+}
+.archive {
+  padding: 0;
+  list-style: none;
+}
+.archive-title {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+.archive li {
+  margin-bottom: 40px;
+  display: block;
+}
+.sitemap aside {
+  margin-bottom: 40px;
+}
+.sitemap aside h2 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.sitemap aside ul {
+  padding-left: 30px;
+}
+.sitemap aside ul ul {
+  padding-left: 13px;
+}
+.first-li {
+  padding: 20px;
+  background: #f5f5f5;
+}
+.first-li h2 {
+  font-size: 28px;
+}
+.archive-desc {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.archive-nav {
+  padding: 20px 0 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  letter-spacing: 1px;
+}
+.page-number {
+  color: #888;
+  display: inline-block;
+  width: 100%;
+  font-weight: 400;
+}
+.prev {
+  position: absolute;
+  left: 0;
+}
+.next {
+  position: absolute;
+  right: 0;
+}
+.article-title {
+  display: block;
+  margin-bottom: 30px;
+}
+.content p,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content table,
+.content ol,
+.content ul,
+.content iframe,
+.content dl,
+.content hr,
+.gist {
+  margin-bottom: 20px;
+}
+.content h2,
+.content h3 {
+  padding-top: 20px;
+}
+.content h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.content {
+  font-size: 14px;
+}
+.article-title {
+  font-size: 28px;
+}
+blockquote {
+  line-height: 1.2;
+  margin-left: 30px;
+  font-family: georgia, serif;
+  font-size: 22px;
+}
+blockquote footer {
+  padding-top: 20px;
+  position: relative;
+  top: -20px;
+  font-size: 12px;
+}
+blockquote cite:before {
+  content: "—";
+  padding: 0 0.5em;
+}
+.pullquote {
+  text-align: left;
+  width: 50%;
+  margin: 0;
+}
+.pullquote.left {
+  margin-right: 0.5em;
+}
+.pullquote.right {
+  margin-left: 0.5em;
+  text-align: right;
+}
+table {
+  width: 100%;
+}
+thead th,
+tbody td {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+.lines td {
+  border: none;
+}
+.meta {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 5px;
+}
+.meta-tags:before {
+  content: "Tag: ";
+}
+.meta-cats:before {
+  content: "Category:  ";
+}
+.content-nav {
+  padding: 40px 0 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+}
+.video-container {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+}
+.site-footer {
+  text-align: center;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+.highlight {
+  overflow: auto;
+}
+.highlight tr:hover td {
+  background: none;
+}
+.highlight figcaption {
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+.highlight figcaption a {
+  float: right;
+}
+.gutter {
+  width: 7%;
+}
+pre .comment,
+pre .title {
+  color: #999;
+}
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #e24a4d;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #f99157;
+}
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #4f9a4f;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #4f9a4f;
+}
+pre .css .hexcolor {
+  color: #48baba;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #3072b4;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #af26af;
+}
+.gutter {
+  border-right: border-default;
+}
